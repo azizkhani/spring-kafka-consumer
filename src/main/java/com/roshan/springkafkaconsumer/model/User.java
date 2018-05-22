@@ -5,23 +5,25 @@ package com.roshan.springkafkaconsumer.model;
  */
 public class User {
 
-    private String name;
+    private String username;
     private String dep;
+    private Long salary;
 
     public User() {
     }
 
-    public User(String name, String dep) {
-        this.name = name;
+    public User(String username, String dep, Long salary) {
+        this.username = username;
         this.dep = dep;
+        this.salary = salary;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getDep() {
@@ -32,11 +34,20 @@ public class User {
         this.dep = dep;
     }
 
+    public Long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Long salary) {
+        this.salary = salary;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "username='" + username + '\'' +
                 ", dep='" + dep + '\'' +
+                ", salary=" + salary +
                 '}';
     }
 }
